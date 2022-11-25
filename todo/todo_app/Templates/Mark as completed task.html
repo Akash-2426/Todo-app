@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mark As Completed task</title>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Mark as completed task</h1>
+    <hr>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Details</th>
+      <th scope="col">Date</th>
+
+
+    </tr>
+  </thead>
+    {% for task in task %}
+  <tbody>
+    <tr>
+      <th scope="row">{{item.id}}</th>
+      <td>{{task.Title}}</td>
+      <td>{{task.Details}}</td>
+      <td>{{task.Date}}</td>
+
+    </tr>
+
+  </tbody>
+    {% endfor %}
+
+</table>
+</div>
+</body>
+</html>
